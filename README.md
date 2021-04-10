@@ -7,3 +7,5 @@ override files as they are usually used to override resources locally and theref
 override files you want to add to version control using negative pattern! example_override.tf
 tfplan files to ignore command plan output: terraform plan -out = tfplan
 CLI config files .terraformrc terraform.rc
+new line
+new line - with py charm
