@@ -8,4 +8,4 @@ override files you want to add to version control using negative pattern! exampl
 tfplan files to ignore command plan output: terraform plan -out = tfplan
 CLI config files .terraformrc terraform.rc
 new line
-new line - with py charm
+new line - with PyCharm
