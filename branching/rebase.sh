@@ -1,3 +1,4 @@
+cat rebase.sh
 #!/bin/bash
 # display command line options
 
@@ -7,7 +8,6 @@ for param in "$@"; do
     count=$(( $count + 1 ))
 done
 
-echo "====="
 
 
 
@@ -16,6 +16,48 @@ echo "====="
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 9b1d1d2 (git-rebase 1)
 
 
 
