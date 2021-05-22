@@ -6,95 +6,58 @@ echo  будет выводить 1+2, перед a и b стоят $, знач�
 echo  будет выводить 3, так как выражение с переменными $a+$b под общей скобкой с $
 
 2.
+
+```bash
 while ((1==1)
-
 do
-
 curl https://localhost:4757
-
 if (($? != 0))
-
 then
-
 date >> curl.log
-
 elif (($? = 0))
-
 then
-
 break
-
 fi
-
 done
+```
 
 3.
+```bash
 array_int=(192.168.0.1 173.194.222.113 87.250.250.242)
-
 while ((1==1))
-
 do
-
 for a in ${array_int[@]}
-
 do
-
 for (( b=1; b<=5; b++ ))
-
 do
-
 ping –c 1 $a
-
 done
-
 done
-
 if (($? !=0))
-
 then
-
 ping >> log.log
-
 fi
-
 done
-
-
+```
 4.
+```bash
 array_int=(192.168.0.1 173.194.222.113 87.250.250.242)
-
 while ((1==1))
-
 do
-
 for a in ${array_int[@]}
-
 do
-
-for (( b=1; b<=5; b++ ))
-            
-do
-          
+for (( b=1; b<=5; b++ ))         
+do   
 ping –c 1 $a
-
 if (($? !=0))
-
 then
-
 $a >> error_log
-
 fi
-
 done
-
 done
-
 if (($? !=0))
-
 then
-
 ping >> log.log
-
 fi
-
 done
+```
