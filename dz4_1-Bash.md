@@ -51,7 +51,7 @@ for a in ${array_int[@]}
     nc –zv $a 80
       if (($? !=0))
       then
-      $a >> error_log
+      $a > error_log
       fi
     done
   done
