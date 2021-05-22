@@ -13,7 +13,7 @@ do
 curl https://localhost:4757
 if (($? != 0))
 then
-date >> curl.log
+date > curl.log
 elif (($? = 0))
 then
 break
@@ -27,15 +27,15 @@ array_int=(192.168.0.1 173.194.222.113 87.250.250.242)
 while ((1==1))
 do
 for a in ${array_int[@]}
-do
-for (( b=1; b<=5; b++ ))
-do
-ping –c 1 $a
-done
-done
+  do
+  for (( b=1; b<=5; b++ ))
+     do
+     nc –zv $a 80
+     done
+  done
 if (($? !=0))
 then
-ping >> log.log
+$? > log.log
 fi
 done
 ```
@@ -45,19 +45,19 @@ array_int=(192.168.0.1 173.194.222.113 87.250.250.242)
 while ((1==1))
 do
 for a in ${array_int[@]}
-do
-for (( b=1; b<=5; b++ ))         
-do   
-ping –c 1 $a
+  do
+  for (( b=1; b<=5; b++ ))         
+    do   
+    nc –zv $a 80
+      if (($? !=0))
+      then
+      $a >> error_log
+      fi
+    done
+  done
 if (($? !=0))
 then
-$a >> error_log
-fi
-done
-done
-if (($? !=0))
-then
-ping >> log.log
+$? > log.log
 fi
 done
 ```
